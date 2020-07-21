@@ -4,43 +4,6 @@
         <name>XLocalizer.Translate.IBMWatsonTranslate</name>
     </assembly>
     <members>
-        <member name="T:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator">
-            <summary>
-            IBM Watson translation service for XLocalizer.TranslationServices
-            </summary>
-        </member>
-        <member name="P:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator.ServiceName">
-            <summary>
-            Service name
-            </summary>
-        </member>
-        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator})">
-            <summary>
-            Initialize new instance of IBM Watson trnaslation service
-            </summary>
-            <param name="configuration"></param>
-            <param name="logger"></param>
-        </member>
-        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator.TranslateAsync(System.String,System.String,System.String,System.String)">
-            <summary>
-            Translate text...
-            </summary>
-            <param name="source"></param>
-            <param name="target"></param>
-            <param name="text"></param>
-            <param name="format"></param>
-            <returns></returns>
-        </member>
-        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonStringTranslator.TryTranslate(System.String,System.String,System.String,System.String@)">
-            <summary>
-            
-            </summary>
-            <param name="source"></param>
-            <param name="target"></param>
-            <param name="text"></param>
-            <param name="translation"></param>
-            <returns></returns>
-        </member>
         <member name="T:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateResult">
             <summary>
             IBM Watson translate result
@@ -60,6 +23,43 @@
             <summary>
             Translation text
             </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService">
+            <summary>
+            IBM Watson translation service for XLocalizer.TranslationServices
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService.ServiceName">
+            <summary>
+            Service name
+            </summary>
+        </member>
+        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService})">
+            <summary>
+            Initialize new instance of IBM Watson trnaslation service
+            </summary>
+            <param name="configuration"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService.TranslateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Translate text...
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="text"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLocalizer.Translate.IBMWatsonTranslate.IBMWatsonTranslateService.TryTranslate(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="text"></param>
+            <param name="translation"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

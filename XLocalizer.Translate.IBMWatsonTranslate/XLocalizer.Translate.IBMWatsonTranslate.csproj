@@ -10,20 +10,20 @@
 			Extension package for XLocalizer.TranslationServices to provide translations using IBM.Watson.LanguageTranslator.v3.
 		</Description>
 		<Copyright>Ziyad.info</Copyright>
-		<PackageProjectUrl>https://github.com/LazZiya/TranslationServices/</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>asp.net, core, razor, mvc, localization, globalization, translation, services</PackageTags>
 		<PackageReleaseNotes>
 			- IBM.Watson.LanguageTranslator.v3 https://cloud.ibm.com/catalog/services/language-translator
-			Release notes: https://github.com/LazZiya/TranslationServices/releases
+			Release notes: https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate/releases
 		</PackageReleaseNotes>
-		<Version>1.0.0-prv1</Version>
+		<Version>1.0.0-prv2</Version>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageIconUrl>https://raw.githubusercontent.com/LazZiya/TranslationServices/master/XLocalizer.TranslationServices/files/icon.png</PackageIconUrl>
-		<RepositoryUrl>https://github.com/LazZiya/TranslationServices</RepositoryUrl>
+		<PackageIconUrl>https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate/raw/master/XLocalizer.Translate.IBMWatsonTranslate/files/icon.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate</RepositoryUrl>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -38,7 +38,7 @@
 	</ItemGroup>
 		
 	<ItemGroup Condition="'$(UseReference)' == 'Nugets'">
-		<PackageReference Include="XLocalizer.Translate" Version="1.0.0-prv3" Exclude="Build,Analyzers" />
+		<PackageReference Include="XLocalizer.Translate" Version="1.0.0-prv4" Exclude="Build,Analyzers" />
 		<PackageReference Include="IBM.Watson.LanguageTranslator.v3" Version="4.5.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" Exclude="Build,Analyzers"/>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.0.0" Exclude="Build,Analyzers"/>

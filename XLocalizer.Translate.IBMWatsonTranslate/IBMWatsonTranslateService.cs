@@ -13,7 +13,7 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
     /// <summary>
     /// IBM Watson translation service for XLocalizer.TranslationServices
     /// </summary>
-    public class IBMWatsonStringTranslator : IStringTranslator
+    public class IBMWatsonTranslateService : ITranslator
     {
         /// <summary>
         /// Service name
@@ -31,7 +31,7 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         /// </summary>
         /// <param name="configuration"></param>
         /// <param name="logger"></param>
-        public IBMWatsonStringTranslator(IConfiguration configuration, ILogger<IBMWatsonStringTranslator> logger)
+        public IBMWatsonTranslateService(IConfiguration configuration, ILogger<IBMWatsonTranslateService> logger)
         {
             _logger = logger;
 
