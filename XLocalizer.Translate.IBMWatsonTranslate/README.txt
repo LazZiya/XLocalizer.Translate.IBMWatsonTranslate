@@ -17,7 +17,7 @@ Instructions to use this package :
 
 - Register in startup:
 ````
-services.AddSingleton<ITranslationService, IBMWatsonTranslateService>();
+services.AddSingleton<ITranslator, IBMWatsonTranslateService>();
 ````
 
 Repository: https://github.com/LazZiya/TranslationServices
