@@ -7,7 +7,7 @@ Instructions to use this package :
 
 ````
 {
-  "XLocalizer.TranslationServices": {
+  "XLocalizer.Translate": {
     "IBMWatsonTranslateApiKey": "xxx-imb-watson-cloud-api-key-xxx",
     "IBMWatsonTranslateServiceUrl": "https// ibm-service-instance-url",
     "IBMWatsonTranslateServiceVersionDate": "ibm-service-version-date"

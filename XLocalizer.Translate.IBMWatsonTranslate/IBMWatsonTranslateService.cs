@@ -35,19 +35,19 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         {
             _logger = logger;
 
-            IBMWatsonTranslateApiKey = configuration["XLocalizer.TranslationServices:IBMWatsonTranslateApiKey"];
+            IBMWatsonTranslateApiKey = configuration["XLocalizer.Translate:IBMWatsonTranslateApiKey"];
             if (string.IsNullOrWhiteSpace(IBMWatsonTranslateApiKey))
             {
                 throw new NullReferenceException(nameof(IBMWatsonTranslateApiKey));
             }
 
-            IBMWatsonTranslateServiceUrl = configuration["XLocalizer.TranslationServices:IBMWatsonTranslateServiceUrl"];
+            IBMWatsonTranslateServiceUrl = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceUrl"];
             if (string.IsNullOrWhiteSpace(IBMWatsonTranslateServiceUrl))
             {
                 throw new NullReferenceException(nameof(IBMWatsonTranslateServiceUrl));
             }
 
-            IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.TranslationServices:IBMWatsonTranslateServiceVersionDate"];
+            IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceVersionDate"];
             if (string.IsNullOrWhiteSpace(IBMWatsonTranslateServiceVersionDate))
             {
                 throw new NullReferenceException(nameof(IBMWatsonTranslateServiceVersionDate));
