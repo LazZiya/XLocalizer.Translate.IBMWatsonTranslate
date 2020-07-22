@@ -17,7 +17,7 @@
 			- IBM.Watson.LanguageTranslator.v3 https://cloud.ibm.com/catalog/services/language-translator
 			Release notes: https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate/releases
 		</PackageReleaseNotes>
-		<Version>1.0.0-prv2</Version>
+		<Version>1.0.0-prv4</Version>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

@@ -9,7 +9,7 @@ Instructions to use this package :
 {
   "XLocalizer.Translate": {
     "IBMWatsonTranslateApiKey": "xxx-imb-watson-cloud-api-key-xxx",
-    "IBMWatsonTranslateServiceUrl": "https// ibm-service-instance-url",
+    "IBMWatsonTranslateServiceUrl": "https//ibm-service-instance-url",
     "IBMWatsonTranslateServiceVersionDate": "ibm-service-version-date"
   }
 }
@@ -20,4 +20,4 @@ Instructions to use this package :
 services.AddSingleton<ITranslator, IBMWatsonTranslateService>();
 ````
 
-Repository: https://github.com/LazZiya/TranslationServices
+Repository: https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate

@@ -21,10 +21,8 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         public string ServiceName => "IBM Watson";
 
         private readonly ILogger _logger;
-        
-        private readonly string IBMWatsonTranslateApiKey;
-        private readonly string IBMWatsonTranslateServiceUrl;
-        private readonly string IBMWatsonTranslateServiceVersionDate;
+
+        private readonly LanguageTranslatorService _translatorService;
 
         /// <summary>
         /// Initialize new instance of IBM Watson trnaslation service
@@ -35,23 +33,17 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         {
             _logger = logger;
 
-            IBMWatsonTranslateApiKey = configuration["XLocalizer.Translate:IBMWatsonTranslateApiKey"];
-            if (string.IsNullOrWhiteSpace(IBMWatsonTranslateApiKey))
-            {
-                throw new NullReferenceException(nameof(IBMWatsonTranslateApiKey));
-            }
+            var IBMWatsonTranslateApiKey = configuration["XLocalizer.Translate:IBMWatsonTranslateApiKey"] ?? throw new NullReferenceException("IBMWatsonTranslateApiKey");
 
-            IBMWatsonTranslateServiceUrl = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceUrl"];
-            if (string.IsNullOrWhiteSpace(IBMWatsonTranslateServiceUrl))
-            {
-                throw new NullReferenceException(nameof(IBMWatsonTranslateServiceUrl));
-            }
+            var IBMWatsonTranslateServiceUrl = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceUrl"] ?? throw new NullReferenceException("IBMWatsonTranslateServiceUrl");
 
-            IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceVersionDate"];
-            if (string.IsNullOrWhiteSpace(IBMWatsonTranslateServiceVersionDate))
-            {
-                throw new NullReferenceException(nameof(IBMWatsonTranslateServiceVersionDate));
-            }
+            var IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceVersionDate"] ?? throw new NullReferenceException("IBMWatsonTranslateServiceVersionDate");
+
+            var authenticator = new IamAuthenticator(IBMWatsonTranslateApiKey);
+            _translatorService = new LanguageTranslatorService(IBMWatsonTranslateServiceVersionDate, authenticator);
+
+            _translatorService.SetServiceUrl(IBMWatsonTranslateServiceUrl);
+            _translatorService.DisableSslVerification(true);
         }
 
         /// <summary>
@@ -66,13 +58,7 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         {
             try
             {
-                var authenticator = new IamAuthenticator(IBMWatsonTranslateApiKey);
-                var languageTranslator = new LanguageTranslatorService(IBMWatsonTranslateServiceVersionDate, authenticator);
-
-                languageTranslator.SetServiceUrl(IBMWatsonTranslateServiceUrl);
-                languageTranslator.DisableSslVerification(true);
-
-                var result = languageTranslator.Translate(new List<string> { text }, $"{source}-{target}");
+                var result = _translatorService.Translate(new List<string> { text }, $"{source}-{target}");
 
                 var transResult = new TranslationResult
                 {
