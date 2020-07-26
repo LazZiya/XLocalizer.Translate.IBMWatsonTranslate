@@ -1,4 +1,4 @@
-﻿XLocalizer.TranslationServices.IBMWatsonTranslate
+﻿XLocalizer.Translate.IBMWatsonTranslate
 
 Instructions to use this package :
 
