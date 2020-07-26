@@ -10,7 +10,7 @@
 			Extension package for XLocalizer.TranslationServices to provide translations using IBM.Watson.LanguageTranslator.v3.
 		</Description>
 		<Copyright>Ziyad.info</Copyright>
-		<PackageProjectUrl>https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate</PackageProjectUrl>
+		<PackageProjectUrl>http://docs.ziyad.info/XLocalizer</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>asp.net, core, razor, mvc, localization, globalization, translation, services</PackageTags>
 		<PackageReleaseNotes>
