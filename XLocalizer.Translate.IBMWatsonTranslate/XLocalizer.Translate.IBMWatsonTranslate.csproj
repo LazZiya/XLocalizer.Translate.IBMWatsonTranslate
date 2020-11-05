@@ -39,7 +39,7 @@
 	</ItemGroup>
 		
 	<ItemGroup Condition="'$(UseReference)' == 'Nugets'">
-		<PackageReference Include="XLocalizer.Translate" Version="1.0.0-rc.*" Exclude="Build,Analyzers" />
+		<PackageReference Include="XLocalizer.Translate" Version="1.0.0-rc.1" Exclude="Build,Analyzers" />
 		<PackageReference Include="IBM.Watson.LanguageTranslator.v3" Version="4.5.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" Exclude="Build,Analyzers"/>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.0.0" Exclude="Build,Analyzers"/>
