@@ -21,3 +21,4 @@ services.AddSingleton<ITranslator, IBMWatsonTranslateService>();
 ````
 
 Repository: https://github.com/LazZiya/XLocalizer.Translate.IBMWatsonTranslate
+Docs: https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-ibm.md
