@@ -33,11 +33,11 @@ namespace XLocalizer.Translate.IBMWatsonTranslate
         {
             _logger = logger;
 
-            var IBMWatsonTranslateApiKey = configuration["XLocalizer.Translate:IBMWatsonTranslateApiKey"] ?? throw new NullReferenceException("IBMWatsonTranslateApiKey");
+            var IBMWatsonTranslateApiKey = configuration["XLocalizer.Translate:IBMWatsonTranslateApiKey"] ?? throw new NullReferenceException("Configuration key for IBMWatsonTranslateApiKey was not found! For more details see https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-ibm.md");
 
-            var IBMWatsonTranslateServiceUrl = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceUrl"] ?? throw new NullReferenceException("IBMWatsonTranslateServiceUrl");
+            var IBMWatsonTranslateServiceUrl = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceUrl"] ?? throw new NullReferenceException("Configuration key for IBMWatsonTranslateServiceUrl was not found! For more details see https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-ibm.md");
 
-            var IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceVersionDate"] ?? throw new NullReferenceException("IBMWatsonTranslateServiceVersionDate");
+            var IBMWatsonTranslateServiceVersionDate = configuration["XLocalizer.Translate:IBMWatsonTranslateServiceVersionDate"] ?? throw new NullReferenceException("Configuration key for IBMWatsonTranslateServiceVersionDate was not found! For more details see https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-ibm.md");
 
             var authenticator = new IamAuthenticator(IBMWatsonTranslateApiKey);
             _translatorService = new LanguageTranslatorService(IBMWatsonTranslateServiceVersionDate, authenticator);
